@@ -174,9 +174,24 @@ button,
 .topbar {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 16px;
   margin-bottom: 28px;
+}
+
+.top-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.top-actions .primary {
+  flex: 0 0 auto;
+}
+
+#confirm-wrap {
+  margin-top: 14px;
 }
 
 .topbar h1 {
@@ -196,13 +211,28 @@ button,
 }
 
 .card {
+  position: relative;
   break-inside: avoid;
   margin: 0 0 14px;
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid var(--line);
   background: var(--bg-lift);
+}
+
+.card img {
   cursor: zoom-in;
+}
+
+.card-del {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 6px 10px;
+  font-size: 0.75rem;
+  background: rgba(20, 14, 16, 0.78);
+  color: var(--ink);
+  border: 1px solid var(--line);
 }
 
 .card img {

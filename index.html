@@ -21,10 +21,14 @@
       </header>
 
       <section id="lock" class="lock-card">
-        <p>Fotoğraflar tarayıcıda, ortak şifreyle açılır. Sunucuda yalnızca şifreli veri durur.</p>
+        <p id="lock-copy">Fotoğraflar bu cihazda, şifreli olarak durur.</p>
         <form id="unlock-form">
           <label for="password">Şifre</label>
           <input id="password" name="password" type="password" autocomplete="current-password" required />
+          <div id="confirm-wrap" class="hidden">
+            <label for="password2">Şifre tekrar</label>
+            <input id="password2" name="password2" type="password" autocomplete="new-password" />
+          </div>
           <div class="row">
             <button class="primary" type="submit">Galeriyi aç</button>
           </div>
@@ -35,9 +39,13 @@
       <section id="gallery" class="hidden">
         <div class="topbar">
           <h1>Görkem <span class="amp">&amp;</span> Hazan</h1>
-          <button id="lock-again" class="ghost" type="button">Kilitle</button>
+          <div class="top-actions">
+            <button id="add-btn" class="primary" type="button">Fotoğraf ekle</button>
+            <button id="lock-again" class="ghost" type="button">Kilitle</button>
+          </div>
         </div>
-        <div id="empty" class="empty hidden">Henüz şifreli fotoğraf yok.</div>
+        <input id="add-files" type="file" accept="image/*" multiple hidden />
+        <div id="empty" class="empty hidden">Henüz fotoğraf yok. Yukarıdan ekleyin; galeride kalır.</div>
         <div id="grid" class="grid"></div>
       </section>
 
@@ -49,6 +57,7 @@
     </div>
 
     <script src="js/crypto.js"></script>
+    <script src="js/db.js"></script>
     <script src="js/gallery.js"></script>
   </body>
 </html>

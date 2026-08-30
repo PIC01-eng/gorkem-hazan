@@ -67,12 +67,17 @@
     }
   }
 
+  function randomSaltB64() {
+    return bytesToB64(crypto.getRandomValues(new Uint8Array(16)));
+  }
+
   global.VaultCrypto = {
     deriveKey,
     encryptBytes,
     decryptBytes,
     makeVerifier,
     checkVerifier,
+    randomSaltB64,
     bytesToB64,
     b64ToBytes,
   };

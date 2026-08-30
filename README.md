@@ -1,22 +1,11 @@
 # Görkem & Hazan
 
-Tarayıcıda AES-256-GCM ile şifrelenen özel fotoğraf arşivi. GitHub Pages üzerinde ücretsiz yayınlanır; depoda yalnızca şifreli veri durur.
+Şifreli fotoğraf galerisi. Site GitHub Pages’te durur; **fotoğraflar GitHub’a gitmez**. Şifreledikten sonra bu tarayıcıda (IndexedDB) kalır.
 
-## Şifre
+## Kullanım
 
-Ortak şifreyi koda yazmayın. İlk fotoğrafları `admin.html` ile eklerken belirleyin. Unutulursa arşiv açılamaz.
+1. Siteyi açın, ilk seferde şifre belirleyin.
+2. **Fotoğraf ekle** ile yükleyin. Galeride kalır.
+3. Aynı tarayıcıda tekrar açınca şifreyle görülür.
 
-Depo herkese açıktır (ücretsiz github.io için gerekir). Güçlü bir şifre kullanın.
-
-## Fotoğraf eklemek
-
-1. Sitede `/admin.html` açın.
-2. Ortak şifreyi girin, fotoğrafları seçin, **Şifrele ve indir**.
-3. Zip içindeki `data/config.json` ve `data/manifest.json` dosyalarını bu projedeki aynı yollara kopyalayın.
-4. Değişiklikleri commit edip GitHub’a gönderin.
-
-## Yayın
-
-`main` dalı GitHub Pages kaynağı olarak ayarlanır. Adres:
-
-`https://<kullanıcı-adı>.github.io/gorkem-hazan/`
+Fotoğraflar bu cihaz ve tarayıcıya bağlıdır. Geçmişi silmek veya başka telefonda açmak galeriyi götürmez.
