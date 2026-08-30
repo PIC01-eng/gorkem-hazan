@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Görkem &amp; Hazan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Outfit:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="mark">
+        <small>Özel arşiv</small>
+        <h1>Görkem <span class="amp">&amp;</span> Hazan</h1>
+      </header>
+
+      <section id="lock" class="lock-card">
+        <p>Fotoğraflar tarayıcıda, ortak şifreyle açılır. Sunucuda yalnızca şifreli veri durur.</p>
+        <form id="unlock-form">
+          <label for="password">Şifre</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" required />
+          <div class="row">
+            <button class="primary" type="submit">Galeriyi aç</button>
+          </div>
+          <div id="lock-error" class="err"></div>
+        </form>
+      </section>
+
+      <section id="gallery" class="hidden">
+        <div class="topbar">
+          <h1>Görkem <span class="amp">&amp;</span> Hazan</h1>
+          <button id="lock-again" class="ghost" type="button">Kilitle</button>
+        </div>
+        <div id="empty" class="empty hidden">Henüz şifreli fotoğraf yok.</div>
+        <div id="grid" class="grid"></div>
+      </section>
+
+      <footer>yalnızca ikiniz için</footer>
+    </div>
+
+    <div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true">
+      <img id="lightbox-img" alt="" />
+    </div>
+
+    <script src="js/crypto.js"></script>
+    <script src="js/gallery.js"></script>
+  </body>
+</html>

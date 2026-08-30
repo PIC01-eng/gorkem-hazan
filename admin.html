@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Fotoğraf ekle · Görkem &amp; Hazan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Outfit:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="mark">
+        <small>Yükleme</small>
+        <h1>Şifrele <span class="amp">&amp;</span> ekle</h1>
+      </header>
+
+      <section class="panel admin-shell">
+        <p>
+          Aynı ortak şifreyi yazın, fotoğrafları seçin, indirdiğiniz dosyaları
+          <code>data/</code> ve <code>photos/</code> klasörlerine koyup GitHub’a gönderin.
+        </p>
+        <form id="admin-form">
+          <label for="password">Ortak şifre</label>
+          <input id="password" type="password" autocomplete="new-password" required />
+          <div class="drop">
+            <label for="files" style="cursor: pointer; color: var(--gold)">Fotoğraf seç</label>
+            <input id="files" type="file" accept="image/*" multiple hidden />
+            <p class="note" style="margin: 8px 0 0">JPEG, PNG, WebP. Büyük dosyalar GitHub’da 100 MB sınırına takılabilir.</p>
+          </div>
+          <ul id="file-list" class="list"></ul>
+          <div class="row">
+            <button class="primary" type="submit">Şifrele ve indir</button>
+            <a class="btn ghost" href="index.html">Galeri</a>
+          </div>
+          <div id="admin-error" class="err"></div>
+        </form>
+      </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+    <script src="js/crypto.js"></script>
+    <script src="js/admin.js"></script>
+  </body>
+</html>
